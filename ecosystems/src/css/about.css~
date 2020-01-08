@@ -1,0 +1,121 @@
+   .container{
+	 position:relative;
+	 width:40%;
+	 height: 900px;
+	}
+
+   .jumbotron{
+	position:relative;
+	padding:0px;
+	width: 100%;
+	max-width: 1400px;
+	margin-right:auto;
+	margin-left:auto;
+	}
+	
+	#vaxjophoto{
+	 position:relative;
+	 height: 300px;
+	 margin-top:0px;
+	}
+	
+	@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+  @media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+.topnav{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	align-items: center;
+	}
+	
+  ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {
+  float: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;  
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+.frame{
+  text-align: justify;
+  background-color: #adad85;
+  padding: 7px 15px;
+  height: 750px;
+}
+
+#ab{
+	position: relative;
+	font-size: 35px;
+	font-weight: bold;
+   font-family: Papyrus,fantasy;
+   top: 10px;
+   bottom: 20px;
+}
+
+#main{
+	position: relative;
+	margin-top: 20px;
+
+}
+
+#me{
+	margin-top: 100px;
+	margin-left: 20px;
+	border: 6px groove #a3c2c2;
+	border-spacing: 15px 20px;
+	padding: 4px 8px;
+	box-shadow: 2px 2px #c2c2a3;
+
+}
+
+#img_div{
+	position: relative;
+	background-color:  #d2a679;
+	height: 750px;
+	width: 100%;
+   max-width: 200px;
+}

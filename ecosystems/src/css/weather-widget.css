@@ -1,0 +1,18 @@
+#weather_div {
+	border: 1px solid #DBDBDB;
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 25px;
+	margin-bottom: 25px;
+}
+
+.weather_forecast_div {
+	width: 50%;
+	display: inline-table;
+	text-align: center;
+	padding: 5px;
+}
+
+.weather_forecast_div p {
+	font-size: 11px;
+	margin-top: 5px;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Bluefish 2.2.7" >
+    <meta name="dcterms.created" content="Thu, 01 Dec 2016 19:31:57 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="src/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="src/css/restaurants_widget.css" type="text/css" />
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFCvNz1nsf2vwvkm6b1ff-m0NkDcFQHG8&libraries=places&callback=initialize" async defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+		
+		<script type="text/javascript" src="src/js/se/lnu/4me104/service/Flickr.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/career/CareerWidget.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/career/CareerWidgetResult.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/hotel/HotelWidget.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/hotel/HotelWidgetResult.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/compare/CompareWidget.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/compare/CompareWidgetResult.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/map/MapWidget.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/weather/WeatherWidget.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/weather/WeatherWidgetResult.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/widget/restaurants/restaurants_widget.js"></script>
+		<script type="text/javascript" src="src/js/se/lnu/4me104/Main.js"></script>
+
+		<script src="http://visitvaxjo.disqus.com/embed.js" type="text/javascript" async="true"></script>
+
+
+    <title>Tourist Guide Site</title>
+    
+    <style type="text/css">
+    <!--
+    body {
+      color:#000000;
+      background-color:#FFFFFF;
+      background-image:url('Background Image');
+      background-repeat:no-repeat;
+    }
+    a  { color:#0000FF; }
+    a:visited { color:#800080; }
+    a:hover { color:#008000; }
+    a:active { color:#FF0000; }
+    -->
+	
+	.container{
+	 position:relative;
+	 width:100%;
+	}
+	
+	
+	.jumbotron{
+	position:relative;
+	padding:0px;
+	width: 100%;
+	max-width: 1400px;
+	margin-right:auto;
+	margin-left:auto;
+	}
+	
+	#vaxjophoto{
+	 position:relative;
+	 height: 300px;
+	 margin-top:0px;
+	}
+	
+	#career_div{
+	  position:relative;
+	  margin-right:auto;
+	  margin-left:auto;
+	  width:100%;
+	}
+	
+	#weather_div{
+	  position:relative;
+	  margin-right:auto;
+	  margin-left:auto;
+	  width:100%;
+	}
+	
+	#weather_forecast_div{
+	  position:relative;
+	  margin-right:auto;
+	  margin-left:auto;
+	  width:100%;
+	}
+	
+	.topnav{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	align-items: center;
+	}
+	
+  ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {
+  float: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;  
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+    </style>
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="jumbotron text-center">
+    
+    <img id="vaxjophoto" src="vaxjo.jpg" width="100%" height="auto" alt="" title="" />
+    
+    <ul class="topnav" id="myTopnav">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="cafeterias.html">Cafeterias</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="wiki.html">Wiki</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="icon">
+      <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+      </li>
+    </ul>
+   
+    </div>
+  
+    <div class="container">
+      <div class="row">
+	   <div class="col-sm-3">
+	   
+	        <div id="page-left-disqus-wrapper">
+				
+			<h2>Do you have something you want to discuss?</h2>
+			<p>This discussion thread is open for discussion.</p>
+					
+			<hr />
+			<div id="disqus_thread"></div>
+				
+			</div>
+	   
+	       <div id="weather_div">
+		   <h2>What is the forecast?</h2>
+		   <p>Here is the local weather forecast for the next couple of days.</p>
+		   <hr />
+
+		   <div id="weather_forecast_div"></div>
+		   
+		   </div> <!--end of weather_div -->
+		   
+	   </div> <!-- end of column1 -->
+	   
+         <div class="col-sm-6">
+        
+             <div id="canvas">
+             <h2>Looking for a restaurant here in Vaxjo?</h2>
+             <p>Here you can find the best restaurants around Vaxjo.</p>
+             <div id="map_places"></div>             
+              </div>
+		  
+         </div> <!-- end of column2 -->
+        
+          <div class="col-sm-3">
+		      <div id="page-right-compare-wrapper">
+
+					<h2>What about the weather?</h2>
+					<p>Compare the weather in your city with the weather in Växjö. Enter your city's name and the date of weather comparison.</p>
+					
+					<hr />
+					
+					<form>
+					
+						<input type="text" id="compare-town" placeholder="Stockholm" />
+						<input type="text" id="compare-date" placeholder="11/12/2013" />
+						
+						<button id="compare-submit-btn">Compare weather</button>
+						
+						<div id="page-right-compare-result-wrapper"></div>
+					
+					</form>
+					
+				</div>
+            
+             <div id="career_div"> </div>
+            
+          </div><!-- end of column3 -->
+		  
+      </div> <!--end of row -->
+    </div>  <!--end of container -->
+    
+    <div class="container">
+      <div class="row">
+       <div class="col-sm-3"></div>
+       
+       <div class="col-sm-6">
+         <div id="foo"> 
+          <div class="center f1">Assignment for the course "Social Media Ecosystems"</div>
+          <br>
+          <div class="center f2">Department of Media Technology - University Linnaeus</div>
+         </div>
+       </div>
+       
+       <div class="col-sm-3"></div>     
+      
+    
+    </div> <!--end of row -->
+    </div> <!--end of container -->
+    
+    <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+  </body>
+</html> 
+
